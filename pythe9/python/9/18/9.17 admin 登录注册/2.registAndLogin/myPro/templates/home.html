@@ -1,0 +1,90 @@
+{% extends 'base.html'%}
+
+{% block title%}
+首页
+{% endblock%}
+
+{% block style%}
+<style>
+    html,body{
+        height: 100%;
+        width: 100%;
+    }
+    main{
+        width: 80%;
+        height: 95%;
+        margin:5vw auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    img{
+        width: 90%;
+        height:60%;
+    }
+    .goods{
+        height: 80%;
+        padding: 20px;
+        flex-grow:1 ;
+        margin: 0 0.5vw;
+        border: 1px  solid black;
+    }
+
+</style>
+{% endblock%}
+
+{% block main%}
+<main>
+    <div class="goods">
+        <a href="#">
+            <img src="https://img.alicdn.com/imgextra/i3/2745591566/O1CN011NRGh7ebaSzmECl_!!2745591566.jpg_430x430q90.jpg" alt="">
+        </a>
+        <div class="com">
+            <span class="title" style="font-size: 1.4vw"><a href="#">【阿信同款】STAYREAL PLAN A I Will Carry You厚棉T 黑标 黑/红</a></span>
+            <div class="con">
+                <span style="font-size: 1.2vw"><a href="https://stayreal.tmall.com/?spm=a1z10.5-b-s.1997427721.d4918089.53c257ebG98vzh">stayreal旗舰店</a></span>
+                &#x3000;<span style="color: #0f0f0f;font-size: 1vw">月销量 </span>
+                <span style="color: orangered;font-size: 1vw">300 件</span>
+            </div>
+        </div>
+    </div>
+    <div class="goods">
+        <a href="#">
+            <img src="https://img.alicdn.com/imgextra/i3/2745591566/O1CN011NRGh5bLZuNXXAq_!!2745591566.jpg_430x430q90.jpg" alt="">
+        </a>
+        <div class="com">
+            <span class="title" style="font-size: 1.4vw"><a href="#">【阿信同款】STAYREAL PLAN A 唯你连帽外套 - 黑标 黑色 男女款</a></span>
+            <div class="con">
+                <span style="font-size: 1.2vw"><a href="https://stayreal.tmall.com/?spm=a1z10.5-b-s.1997427721.d4918089.53c257ebG98vzh">stayreal旗舰店</a></span>
+                &#x3000;<span style="color: #0f0f0f;font-size: 1vw">月销量 </span>
+                <span style="color: orangered;font-size: 1vw">350 件</span>
+            </div>
+        </div>
+    </div>
+    <div class="goods">
+        <a href="#">
+            <img src="https://img.alicdn.com/imgextra/i2/2745591566/O1CN011NRGh6jrP9IT839_!!2745591566.jpg_430x430q90.jpg" alt="">
+        </a>
+        <div class="com">
+            <span style="font-size: 1.4vw" class="title"><a href="#">【阿信同款】STAYREAL PLAN A 终结孤单连帽T - 黑/红 男女卫衣</a></span>
+            <div class="con">
+                <span style="font-size: 1.2vw"><a href="https://stayreal.tmall.com/?spm=a1z10.5-b-s.1997427721.d4918089.53c257ebG98vzh">stayreal旗舰店</a></span>
+                &#x3000;<span style="color: #0f0f0f;font-size: 1vw">月销量 </span>
+                <span style="color: orangered;font-size: 1vw">255 件</span>
+            </div>
+        </div>
+    </div>
+    <div class="goods">
+        <a href="#">
+            <img src="https://img.alicdn.com/imgextra/i3/2745591566/O1CN011NRGh7ebaSzmECl_!!2745591566.jpg_430x430q90.jpg" alt="">
+        </a>
+        <div class="com">
+            <span style="font-size: 1.4vw" class="title"><a href="#">【阿信同款】STAYREAL PLAN A 终结孤单连帽T - 黑/红 男女卫衣</a></span>
+            <div class="con">
+                <span style="font-size: 1.2vw"><a href="https://stayreal.tmall.com/?spm=a1z10.5-b-s.1997427721.d4918089.53c257ebG98vzh">stayreal旗舰店</a></span>
+                &#x3000;<span style="color: #0f0f0f;font-size: 1vw">月销量 </span>
+                <span style="color: orangered;font-size: 1vw">300件</span>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock%}

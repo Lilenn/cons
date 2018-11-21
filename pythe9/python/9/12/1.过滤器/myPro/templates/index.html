@@ -1,0 +1,24 @@
+{% load myfilter %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {#'myfilter' is not a registered tag library. Must be one of 重启就好了#}
+    <h1>{{content | upper | lower | add}}</h1>
+    <h1>{{content| change_length}}</h1>
+
+    {#自定义标签 会被django内部的安全机制定义为非法内容 因此默认对自动以标签使用了转义，让浏览器认为它是一个普通文本#}
+
+    {#关闭自动转义#}
+    {%autoescape off%}
+        {% myTag 'b' 'b'%}
+    {% endautoescape %}
+
+    {% autoescape off%}
+        {% get_current_time %}
+    {% endautoescape%}
+</body>
+</html>

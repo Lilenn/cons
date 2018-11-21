@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js基础知识</title>
+</head>
+<body>
+    <script>
+        //  name = '张三'
+        // variable 变量
+        // var name = '张三'
+        var age = 17
+        // var pi = 3.14
+        // var sex = ture
+        // list = []
+        // var list = []
+
+        if (name =='张三')
+        {   
+            // console 控制 log 日志
+            console.log('san')
+        }
+        else{
+            console.log('si')
+        }
+
+        // if (age < 10)
+        // {
+        //     alert('小于10')
+        // }
+        // else if(age < 18)
+        // {
+        //     alert('小于18')
+        // }
+        // else if(age< 25)
+        // {
+        //     //  出现弹出框
+        //     alert('小于25')
+        // }
+        // else{
+        //     alert('大于等于25')
+        // }
+        // 注意： 如果判断条件下面没有写{}
+        // 那么 默认判断条件下面的第一行代码添加到{}里面
+        if (age > 17)
+
+        console.log('----------------------')
+        console.log('+++++++++++++++')
+
+        while (age < 20)
+        {
+            age += 1
+
+            console.log(age)
+        }
+        // 先做再判断 如果条件满足 就执行第二次
+        // 否则就不再执行第二次
+        do{
+            console.log('xingqiyi')
+        }while(age == 300);
+        
+        // 前两种判断结构 既可以判断具体值 也可以判断范围
+        // 但是这种结构 只能判断具体值
+        switch(age)
+        {
+            case 1:{
+                console.log('1')
+                break;
+            }
+            case 2:{
+                console.log('2')
+                break;
+            }
+        }
+
+        var num = 10;
+
+        num +=10;
+        // num = num+1
+        num ++ //先使用自己的值 然后+1
+        ++ num //先+1 然后使用自己的值
+
+        var sum = 10
+            //  11      12       13
+        sum  = (++sum)+(++sum) +(++sum)
+            //   36     37    38
+        sum = (sum++) + (sum++) + (sum++)
+        console.log(sum)
+
+        sum =10
+            //   10 + 12 +13 + 13 +15
+        sum= (sum ++ ) + (++sum) + (++sum) + (sum++) + (++sum)
+        console.log(sum)
+            //   10 +11 -9 + 10 - 10 -8
+        sum = (sum++) + (sum--) -(--sum) +(++sum) - (sum--) - (--sum)
+        console.log(sum)
+    </script>
+</body>
+</html>

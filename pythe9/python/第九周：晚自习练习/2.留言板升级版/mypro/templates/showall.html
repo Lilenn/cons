@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/message.css">
+    <title>所有留言</title>
+</head>
+<body>
+<header>
+    <button onclick="window.location.href='http://localhost:8000/add'">添加留言</button>
+    <button onclick="window.location.href='http://localhost:8000/delate'">删除留言</button>
+    <button onclick="window.location.href='http://localhost:8000/update'">修改留言</button>
+    <button onclick="window.location.href='http://localhost:8000/select'">查找留言</button>
+</header>
+    {% for message in allinfo%}
+        <div class="message_item">
+            留言人:{{message.m_name}}
+            <br>
+            留言人邮箱:{{message.m_email}}
+            <br>
+            留言人地址:{{message.m_address}}
+            <br>
+            留言内容:{{message.m_message}}
+            <br>
+
+        </div>
+    {% endfor %}
+</body>
+</html>

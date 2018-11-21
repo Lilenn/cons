@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 800px;
+            height: 80px;
+            border: 1px solid red;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>共和国小青年的留言板</h1>
+    <textarea name="info1" id="" cols="30" rows="10"></textarea>
+    <br>
+    <button onclick="click1()">留言</button>
+    <br><br>
+    <script>
+        var info1 = document.getElementsByName('info1')[0]
+        // console.log(info1)
+        function click1(){
+            var xhr = new XMLHttpRequest()
+            var form = new FormData()
+            var time = new Date()
+            
+            var currenttime = time.getFullYear() + '年'+
+            (time.getMonth()+1) + '月' + time.getDate()+'日 '+
+            (time.getHours()<10? '0'+time.getHours():time.getHours())
+            +':'+
+            (time.getMinutes()<10? '0'+time.getMinutes():time.getMinutes())
+            +':'+
+            (time.getSeconds()<10? '0'+time.getSeconds():time.getSeconds())
+            form.append('info',info1.value)
+            form.append('time',currenttime)
+            xhr.open('post','/new')
+            xhr.send(form)
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState == 4){
+                    alert('留言成功')
+                    var div = document.createElement('div')
+                    div.style.width = '800px'      
+                    div.style.border = '1px solid gray'
+                    document.body.appendChild(div)
+                    div.innerHTML = ''
+                    div.innerHTML= xhr.responseText
+                }
+            }
+        }
+    </script>
+</body>
+</html>

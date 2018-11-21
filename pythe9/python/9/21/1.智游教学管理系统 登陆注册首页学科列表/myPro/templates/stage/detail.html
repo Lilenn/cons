@@ -1,0 +1,69 @@
+{% extends 'base.html'%}
+
+{% block title%}
+阶段详情
+{% endblock%}
+
+{% block style%}
+<style>
+     h2{
+            margin: 0;
+            padding: 12px 0;
+            font-size: 20px;
+            background-color: lightgray;
+        }
+    .navbar{
+        margin-bottom: 0;
+    }
+    span{
+        font-weight: 600;
+        font-size: 20px;
+    }
+</style>
+{% endblock %}
+{% block main %}
+<h2>
+    <div class="container">
+       阶段详情
+    </div>
+</h2>
+
+<div class="container">
+    <br><br>
+    <div>
+        <span>学科名称</span>
+        <br><br>
+        {{subject.name}}
+    </div>
+    <br>
+    <div>
+        <span>序号</span>
+        <br><br>
+        {{stage.number}}
+    </div>
+    <br>
+    <div>
+        <span>标题</span>
+         <br><br>
+        {{stage.title}}
+    </div>
+    <br>
+    <div>
+        <span>学时</span>
+         <br><br>
+        {{stage.days}}天
+    </div>
+    <br>
+    <div>
+        <span>学习方法</span>
+         <br><br>
+        {{stage.learning}}
+    </div>
+    <br>
+    <div>
+        <span>备注</span>
+        <br><br>
+        {{stage.remark}}
+    </div>
+</div>
+{% endblock %}

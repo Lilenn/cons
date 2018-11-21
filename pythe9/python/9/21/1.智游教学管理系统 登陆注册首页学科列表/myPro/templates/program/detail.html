@@ -1,0 +1,64 @@
+{% extends 'base.html'%}
+
+{% block title%}
+二级大纲详情
+{% endblock%}
+
+{% block style%}
+<style>
+     h2{
+            margin: 0;
+            padding: 12px 0;
+            font-size: 20px;
+            background-color: lightgray;
+        }
+    .navbar{
+        margin-bottom: 0;
+    }
+    span{
+        font-weight: 600;
+        font-size: 20px;
+    }
+</style>
+{% endblock %}
+{% block main %}
+<h2>
+    <div class="container">
+       二级大纲详情
+    </div>
+</h2>
+
+<div class="container">
+    <br><br>
+
+    <div>
+        <span>天序</span>
+        <br><br>
+        第{{program.number}}天
+    </div>
+    <br>
+    <div>
+        <span>标志性内容</span>
+         <br><br>
+        {{program.sign}}
+    </div>
+    <br>
+    <div>
+        <span>内容摘要</span>
+         <br><br>
+        {{program.digest}}
+    </div>
+    <br>
+    <div>
+        <span>课后作业</span>
+         <br><br>
+        {{program.exercise}}
+    </div>
+    <br>
+    <div>
+        <span>备注</span>
+        <br><br>
+        {{program.remark}}
+    </div>
+</div>
+{% endblock %}

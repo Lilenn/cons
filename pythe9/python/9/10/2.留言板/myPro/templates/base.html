@@ -1,0 +1,61 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言板</title>
+    {# 设置根据文件路径来引入指定的文件 #}
+    <link rel="stylesheet" href="/static/message.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h2>留言板</h2>
+            <h4>请留下你的信息</h4>
+        </header>
+
+        <!--1.为什么不能使用get请求-->
+          <!--因为刚进入页面  使用请求方式就是get 而刚进入页面的时候-->
+          <!--是不需要获取页面的 值得-->
+          <!--如果将点击提交按钮的时候 那么肯定输需要获取页面的值的-->
+          <!--可以将请求方式 设置为post, 这样就可以区分是第一次进来 还是提交-->
+        <!--2.为什么不可以写死-->
+          <!--因为现在的代码是在母版 base.html中写的 如果写死的话-->
+          <!--所有继承自母版的子模板都会使用这个url-->
+          <!--但是现在的需求 add.html和updata.html 提交的接口地址不一样-->
+          <!--所以不能写死 所以就用传参的方式-->
+        <form action="{{url}}" method="POST">
+            {% csrf_token %}
+            {% block message_id%}
+            {% endblock message_id%}
+
+            <br>
+            <label for="">姓名</label>
+            <br>
+            <input type="text" name="name" placeholder="请输入姓名">
+            <br>
+
+            <br>
+            <label for="">邮箱</label>
+            <br>
+            <input type="text" name="email" placeholder="请输入邮箱">
+            <br>
+
+            <br>
+            <label for="">联系地址</label>
+            <br>
+            <input type="text" name="address" placeholder="请输入联系地址">
+            <br>
+
+            <br>
+            <label for="">留言</label>
+            <br>
+            <textarea name="message" id="" placeholder="请输入留言"></textarea>
+            <br>
+
+            {% block submit%}
+            {% endblock submit%}
+        </form>
+    </main>
+</body>
+</html>

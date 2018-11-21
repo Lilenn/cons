@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <title>商城首页</title>
+    <style>
+        html,
+        body {
+            
+            margin: 0;
+            background-color: #eee;
+
+        }
+        body{
+            padding-bottom: 16vw;
+        }
+        header {
+            background-color: whitesmoke;
+            /* view width */
+            height: 14vw;
+
+            /* 让宽 = 内容宽+ 内间距 + 边框
+            如果不设置这句代码的话 
+            就等于内容宽 */
+            box-sizing: border-box;
+            position: relative;
+            color: gray;
+        }
+
+        /* less */
+        @media(max-width:2000px) {
+            header {
+                height: 100px;
+                font-size: 35px;
+                line-height: 100px;
+                padding: 0 40px;
+            }
+            #line {
+                width: calc(100% - 80px);
+            }
+        }
+
+        @media(max-width:768px) {
+            header {
+                height: 14vw;
+                font-size: 5vw;
+                line-height: 14vw;
+                padding: 0 5vw;
+            }
+            #line {
+                width: 90vw;
+            }
+        }
+
+        #line {
+            border: 1px solid lightgray;
+            height: 2vw;
+            border-top: none;
+            position: absolute;
+            bottom: 1vw;
+        }
+
+        .item img {
+            width: 100%;
+        }
+
+        #three {
+            height: 40vw;
+            display: flex;
+            justify-content: space-between;
+            margin: 2vw 0;
+        }
+
+        #three div {
+            padding: 1vw;
+            width: 32vw;
+            /* border: 1px solid springgreen; */
+            background-size: 100% 100%;
+        }
+
+        .list-item {
+            height: 28vw;
+            border-bottom: 1px solid lightgray;
+            padding: 5vw;
+            box-sizing: border-box;
+            background-color: white;
+            position: relative;
+        }
+
+        .img {
+            width: 25%;
+            height: 100%;
+            background-image: url(image/xiaomishouji5.jpg);
+            background-size: 100% 100%;
+            /* 设置是否平铺 */
+            background-repeat: no-repeat;
+        }
+
+        .img img {
+            width: 75%;
+            position: relative;
+            top: 6vw;
+            opacity: 0.7;
+        }
+
+        .text {
+            position: absolute;
+            left: 28vw;
+            top: 5vw;
+            height: calc(100% - 10vw);
+            width: 60%;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 4vw;
+        }
+
+        h3 {
+            margin: 2vw 0;
+            font-size: 3vw;
+            color: gray;
+        }
+
+        h4 {
+            margin: 0;
+            font-size: 2.5vw;
+            color: orangered;
+        }
+        footer{
+            display: flex;
+            height: 16vw;
+            justify-content: space-around;
+            padding-top: 1vw;
+            box-sizing: border-box;
+            border-top: 1px solid lightgray;
+            background-color:white;
+            position: fixed;
+            bottom: 0;
+            z-index: 999;
+            width: 100%
+        }
+        footer div{
+            width: 13vw;
+            height: 100%;
+            text-align: center;
+            font-size: 4vw;
+        }
+        footer img{
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <span class="glyphicon glyphicon-search"></span>
+            搜索商品名称
+        </div>
+        <div id="line"></div>
+    </header>
+    <div id="myCarousel" class="carousel slide">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="image/lbt0.jpg" alt="First slide">
+            </div>
+            <div class="item">
+                <img src="image/lbt1.jpg" alt="Second slide">
+            </div>
+            <div class="item">
+                <img src="image/lbt2.jpg" alt="Third slide">
+            </div>
+            <div class="item">
+                <img src="image/lbt3.jpg" alt="Second slide">
+            </div>
+            <div class="item">
+                <img src="image/lbt4.jpg" alt="Second slide">
+            </div>
+        </div>
+    </div>
+    <section id="three">
+        <div style="background-image:url(image/cx0.jpg)"></div>
+        <div style="background-image:url(image/cx1.jpg)"></div>
+        <div style="background-image:url(image/cx2.jpg)"></div>
+    </section>
+    <section class="list-item">
+        <div class="img">
+            <img src="image/xp.png" alt="">
+        </div>
+        <div class="text">
+            <h2>小米手机5</h2>
+            <h3>骁龙820处理器/4GB内存/128GB闪存</h3>
+            <h4>1999元 起</h4>
+        </div>
+    </section>
+    <section class="list-item">
+        <div class="img">
+            <img src="image/xp.png" alt="">
+        </div>
+        <div class="text">
+            <h2>小米手机5</h2>
+            <h3>骁龙820处理器/4GB内存/128GB闪存</h3>
+            <h4>1999元 起</h4>
+        </div>
+    </section>
+    <section class="list-item">
+        <div class="img">
+            <img src="image/xp.png" alt="">
+        </div>
+        <div class="text">
+            <h2>小米手机5</h2>
+            <h3>骁龙820处理器/4GB内存/128GB闪存</h3>
+            <h4>1999元 起</h4>
+        </div>
+    </section>
+    <section class="list-item">
+        <div class="img">
+            <img src="image/xp.png" alt="">
+        </div>
+        <div class="text">
+            <h2>小米手机5</h2>
+            <h3>骁龙820处理器/4GB内存/128GB闪存</h3>
+            <h4>1999元 起</h4>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <img src="image/page-item.png" alt="">
+            <br>
+            商城
+        </div>
+        <div>
+            <img src="image/page-item.png" alt="">
+            <br>
+            分类
+        </div>
+        <div>
+            <img src="image/page-item.png" alt="">
+            <br>
+            购物车
+        </div>
+        <div>
+            <img src="image/page-item.png" alt="">
+            <br>
+            服务
+        </div>
+    </footer>
+    <!-- 如果要使用bootstrap.js 一定要确保jquery.js先引入 -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+        $('.carousel').carousel()
+    </script>
+</body>
+
+</html>

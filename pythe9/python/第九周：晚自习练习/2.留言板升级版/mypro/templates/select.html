@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>{{url}}</title>
+    <style>
+        div{
+            border: 1px solid red;
+            width:300px;
+
+        }
+    </style>
+</head>
+<body>
+<form  method="post">
+    {% csrf_token%}
+
+            <label for="">ID</label>
+            <br>
+            <input type="text" name="id" placeholder="请输入查找信息的id">
+            <br>
+
+            <br>
+
+
+    <button onclick="window.location.href='http://localhost:8000/select'">查找</button>
+
+</form>
+<br>
+<div>
+    留言人姓名:{{message_select.m_name}}
+    <br>
+    留言人邮箱:{{message_select.m_email}}
+    <br>
+    留言人地址:{{message_select.m_address}}
+    <br>
+    留言人内容:{{message_select.m_message}}
+</div>
+</body>
+</html>

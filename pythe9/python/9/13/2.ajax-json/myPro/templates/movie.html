@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block type%}
+    热映电影
+{% endblock %}
+
+{% block submit%}
+    <button id="submit" type="submit" class="btn btn-default">电影查询</button>
+{% endblock %}
+
+{% block main%}
+    <div id="main" class="container">
+        <h1>城市: {{json.result.cityname}}</h1>
+        {% for movie in json.result.movie %}
+            <h3>电影名称：{{movie.movie_name}}</h3>
+            <h4>上映日期：{{movie.movie_release_date}}</h4>
+            <br>
+        {% endfor %}
+    </div>
+{% endblock %}
+
+{% block script%}
+<script>
+//    post请求可能会产生跨域事件 所以需要将其终止掉
+//以下代码为固定格式 每次post请求都要添加这句代码
+    $.ajaxSetup({
+        data:{'csrfmiddlewaretoken':'{{csrf_token}}'}
+    })
+    $('#submit').click(function (event) {
+        event.preventDefault()
+        var city = $('#input').val()
+        $.post('/movie/',{'city':city},function (data,status) {
+            var main = document.getElementById('main')
+            document.body.removeChild(main)
+
+            if (data['json']['error'] == 0)
+            {
+                div = document.createElement('div')
+                div.className = 'container'
+                div.id = 'main'
+                document.body.appendChild(div)
+
+                h1 = document.createElement('h1')
+                h1.innerText = data['json']['result']['cityname']
+                div.appendChild(h1)
+                var all_movies = data['json']['result']['movie']
+                for (var index= 0 ;index < all_movies.length ; index++)
+                {
+                    var movie = all_movies[index]
+                    var h3 = document.createElement('h3')
+                    var h4 = document.createElement('h4')
+                    h3.innerText = movie.movie_name
+                    h4.innerText = movie.movie_release_date
+                    div.appendChild(h3)
+                    div.appendChild(h4)
+                }
+            }
+            else {
+                h1 = document.createElement('h1')
+                h1.id = 'main'
+                h1.innerText = data['json']['status']
+                document.body.appendChild(h1)
+            }
+
+        })
+    })
+</script>
+{% endblock %}

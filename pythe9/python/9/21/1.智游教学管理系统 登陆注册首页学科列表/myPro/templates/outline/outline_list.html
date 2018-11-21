@@ -1,0 +1,41 @@
+{% extends 'base.html'%}
+
+{% block title%}
+教学大纲管理系统
+{% endblock %}
+
+{% block style%}
+<style>
+    a{
+        color: gray;
+    }
+</style>
+{% endblock%}
+
+{% block main%}
+<div class="container">
+    <h2 class="text-center">一级大纲</h2>
+    {% for outline in outlines %}
+    <div class="text-center">
+        <br>
+        <a style="font-size: 15px;font-weight: 600;color:black" href="/program/list/?outline_id={{outline.id}}">{{outline.title}} ({{outline.days}}天)</a>&#x3000;
+        <a href="/outline/detail/?outline_id={{outline.id}}&stage_id={{stage.id}}"><span class="glyphicon glyphicon-list"></span></a>
+        <a href="/outline/edit/?outline_id={{outline.id}}"><span class="glyphicon glyphicon-edit"></span></a>
+        <a href="/outline/delete/?outline_id={{outline.id}}"><span class="glyphicon glyphicon-remove-circle"></span></a>
+        <br><br>
+        <div style="color: gray">{{outline.advancing}}</div>
+    </div>
+
+    <br>
+    <div class="text-center">
+        <span class="glyphicon glyphicon-arrow-down"></span>
+    </div>
+    <br>
+    {% endfor %}
+    <div class="text-center">
+        <a style="font-size: 20px" href="/outline/add/">
+            <span class="glyphicon glyphicon-plus-sign"></span>
+        </a>
+    </div>
+</div>
+{% endblock %}

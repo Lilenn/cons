@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+
+{% block title %}
+首页
+{%endblock%}
+
+{% block style%}
+<style>
+    main{
+        width:500px;
+        height:570px;
+        margin: 50px auto;
+    }
+    .type{
+        text-align: center;
+        font-size: 25px;
+    }
+    .title{
+        margin-bottom: 40px;
+    }
+</style>
+{% endblock %}
+
+{% block main %}
+<main>
+    <div class="title" style="font-size: 40px;color: black;font-weight:600;text-align: center">
+        学科
+    </div>
+    <div class="type">
+        {% for x in allinfo %}
+        <div>
+            {{x.name}} <span style="color: gray;font-size: 20px">(￥{{x.amount}},{{x.days}}天)</span>&#x3000;
+            <a style="color: lightgray" href="/subject/detail/{{x.id}}"><span class="glyphicon glyphicon-list"></span></a>&#x3000;
+            <a style="color: lightgray" href="/subject/change"><span class="glyphicon glyphicon-edit"></span></a>&#x3000;
+            <a style="color: lightgray" href="/subject"><span class="glyphicon glyphicon-remove-circle"></span></a>
+        </div>
+        <br>
+        {% endfor %}
+    </div>
+    <div style="font-size: 30px;text-align: center;margin-top:40px;">
+        <a style="color: gray" href="/subject/add"><span class="glyphicon glyphicon-plus-sign"></span></a>
+    </div>
+</main>
+{% endblock %}

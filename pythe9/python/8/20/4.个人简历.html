@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人简历</title>
+    <style>
+        body {
+            margin: 0;
+            background-image: url(mu.png);
+            font-family: 时尚中黑简体;
+        }
+        main {
+            width: 400px;
+            margin: 0 auto;
+        }
+        section {
+            width: 400px;
+            height: 100px;
+            border: 1px solid gray;
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 1px 1px 1px gray;
+            /* 裁剪超出屏幕的内容 */
+            overflow: hidden;
+        }
+        section:nth-child(2n+1) {
+            left: -50px;
+        }
+        section:nth-child(2n) {
+            left: 50px;
+        }
+        .hole {
+            /* inline 行标签 代表标签 span
+            特征 1.在同一行显示 2. 不可设置大小
+            block 块标签 代表标签 div
+            特征 1.独占一行 2. 可以设置大小
+            inline-block 行内块标签 代表标签 img
+            特征 1. 在同一行显示 2.可以设置大小 
+            将行标签转化为 行内块 标签 */
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-image: url(mu.png);
+            position: relative;
+            left: 15px;
+            top: 70px;
+        }
+        section:nth-child(8){
+            z-index: 992;
+            background-color: lightgray;
+            /* background-image: url(33.jpg);
+            background-size: 100% 160%; */
+            transform: rotate(2deg);
+        }
+        section:nth-child(7) {
+            top: 15px;
+            z-index: 993;
+            background-color: rgb(203, 156, 235);
+        }
+        section:nth-child(6) {
+            top: 30px;
+            z-index: 994;
+            background-color: rgb(228, 213, 183);
+        }
+        section:nth-child(5) {
+            top: 45px;
+            z-index: 995;
+            background-color: rgb(204, 16, 57);
+        }
+        section:nth-child(4) {
+            top: 60px;
+            z-index: 996;
+            background-color: rgb(131, 60, 197);
+        }
+        section:nth-child(3) {
+            top: 75px;
+            z-index: 997;
+            background-color: rgb(143, 143, 40);
+        }
+        section:nth-child(2) {
+            top: 90px;
+            background-color: rgb(221, 213, 213);
+            z-index: 998;
+        }
+        section:nth-child(1) {
+            top: 105px;
+            background-color: black;
+            background-image: url(hua.png);
+            background-size: 100% 160%;
+            z-index: 999;
+            transform: rotate(-2deg);
+        }
+
+        h1 {
+            color: white;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            margin: 0;
+            font-size: 65px;
+            font-family: 迷你简双线体;
+            /* weight */
+            font-weight: normal;
+        }
+        h2{
+            margin: 0;
+            color: royalblue;
+            position: relative;
+            left: 40px;
+            font-size: 40px;
+        }
+        small{
+            font-size: 20px;
+            color: white;
+            position: relative;
+            left: 40px;
+        }
+        h3{
+            margin: 0;
+            position: absolute;
+            left:295px;
+            top: 0px;
+            font-size: 20px;
+        }
+        .info{
+            position: absolute;
+            font-size: 10px;
+            left: 150px;
+            top: 30px;
+            margin: 0;
+            text-align: right;
+            font-weight: normal;
+        }
+        .what{
+            position: absolute;
+            font-size: 10px;
+            left: 245px;
+            top: 40px;
+            margin: 0;
+            text-align: right;
+        }
+        #phone{
+            margin: 0;
+            position: absolute;
+            left:295px;
+            top: 15px;
+            font-size: 20px;
+            font-weight: normal;;
+        }
+        .phone{
+            position: absolute;
+            font-size: 10px;
+            left: 220px;
+            top: 48px;
+            margin: 0;
+            text-align: right;
+        }
+        #eng{
+            margin: 0;
+            position: absolute;
+            left: 295;
+            top: 20px;
+            font-size: 20px;
+            color:antiquewhite;
+            font-weight: normal;
+        }
+        .eng{
+            position: absolute;
+            font-size: 12px;
+            left: 260px;
+            top: 50px;
+            margin: 0;
+            text-align: right;
+        }
+        .small{
+            font-size: 20px;
+            position: absolute;
+            left: 23px;
+            bottom: 2px;
+            font-family: 迷你简双线体;
+        }
+        .n{
+            font-size: 23px;
+            position: absolute;
+            left: 20px;
+            top: 25px;
+            font-family: 迷你简双线体;
+        }
+        .comment{
+            position: absolute;
+            left: 35px;
+            top: 6px;
+            text-align: left;
+            font-size: 10px;;
+        }
+        #want{
+            position: absolute;
+            top: 20px;
+            left: 100px;
+            font-family: 时尚中黑简体;
+            color:rgb(22, 21, 21);
+
+        }
+        .want{
+            font-size: 38px;
+            color: beige;
+            font-family:时尚中黑简体;
+            position: absolute;
+            top:50px;
+            left: 150px;
+        }
+        div{
+            
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            background-color:rgba(204,0,255,0.5);
+            /* background-color: yellow;
+            opacity: 0.5; */
+        }
+        div:nth-child(4){
+            right: -80px;
+            top: -50px;
+        }
+        div:nth-child(5){
+            top: -20px;
+            left: 40px;
+            width: 150px;
+            height: 150px;
+            /* 设置半透明效果
+            方法一  颜色值范围 0-255 
+             透明度范围 0-1  0 完全透明 1  完全不透明 */
+             background-color:rgba(255, 238, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <span class="hole"></span>
+            <h1>简历</h1>
+            <h2>小婷</h2>
+            <small>xiaoting</small>
+        </section>
+        <section>
+            <span class="hole"></span>
+            <h3>个人信息</h3>
+            <p class="info">
+                籍贯：xxx <br>
+                政治面貌：xxx <br>
+                毕业学校：xxx <br>
+                专业：xxx <br>
+            </p>
+            <p class="what">民族：xx族<br>出生日期：9x年xx月xx日<br>身高：xx</p>
+        </section>
+        <section>
+            <span class="hole"></span>
+            <h3 id="phone">联系方式</h3>
+            <p class="phone">电话：15838370946<br>E-Mail：846077763@qq.com<br>QQ:846077763</p>
+        </section>
+        <section>
+            <span class="hole"></span>
+            <h3 id="eng">教育经历</h3>
+            <p class="eng">于xx省xx市xxxxx学校<br>就读xxxxx</p>
+            <small class="small">2007年至2012年7月</small>
+        </section>
+        <section>
+            <span class="hole"></span>
+            <h3 id="eng">实践经历</h3>
+            <p class="phone">xx市xxxxxx设计有限公司就职<br>担当设计师</p>
+            <small class="n">2010年07月至2011年9月</small>
+        </section>
+        <section>
+            <span class="hole"></span>
+            <h3 id="phone">技能水平</h3>
+            <p class="phone">可熟练操作<br>CoreIDRAW、Adobe Photoshop<br>等设计软件与办公室软件</p>
+        </section>
+        <section>
+            <span class="hole"></span>
+            <h3 id="phone">自我评价</h3>
+            <p class="comment">1.大胆创新，具有敏锐的时尚触角，对设计方<br>面极感兴趣；<br>2.具有良好的独立工作能力，工作认真积极，责任<br>心强，有较好的沟通能力和接受能力；<br>3.既有团队精神和协调能力，适应能力强，能吃苦耐劳，带人真诚热情。</p>
+        </section>
+        <section>
+            <span class="hole"></span>
+            <h3 id="want">求职意向</h3>
+            <h1 class="want">淘宝美工</h1>
+            <div></div>
+            <div></div>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <title>商城主页</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .input {
+            margin: 10px 10px;
+        }
+
+        span {
+            color: lightgray;
+        }
+
+        .line {
+            height: 5px;
+            border-left: 2px;
+            border: 1px solid lightgrey;
+            border-top: none;
+            margin: 2px 3px;
+            padding: 5px;
+        }
+
+        .lei {
+            height: 190px;
+            /* border: 1px solid black; */
+        }
+
+        .lei div {
+            height: 185px;
+        }
+
+        .lei div:nth-child(1) {
+            background-image: url(cx0.jpg);
+            background-size: 100% 100%;
+        }
+
+        .lei div:nth-child(2) {
+            background-image: url(cx1.jpg);
+            background-size: 100% 100%;
+        }
+
+        .lei div:nth-child(3) {
+            background-image: url(cx2.jpg);
+            background-size: 100% 100%;
+        }
+
+        .new {
+            /* border-bottom: 1px solid lightgray; */
+            height: 320px;
+            padding: 7px;
+        }
+
+        .new div {
+            height: 140px;
+            border-bottom: 1px solid rgba(211, 211, 211, 0.116);
+        }
+
+        #ns {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(58, 209, 58, 0.596);
+            color: white;
+            position: relative;
+            top: -40px;
+            left: 30px;
+        }
+
+        #ns strong {
+            position: absolute;
+            top: 14px;
+            left: 8px;
+        }
+
+        .jianjie {
+            position: relative;
+        }
+
+        .name {
+            font-size: 20px;
+            position: absolute;
+            left: 120px;
+            top: -135px;
+            color: black;
+        }
+
+        .neirong {
+            position: absolute;
+            left: 120px;
+            top: -100px;
+            font-size: 17px;
+            color: rgba(177, 172, 172, 0.849);
+        }
+
+        .price {
+            position: absolute;
+            left: 120px;
+            top: -40px;
+            font-size: 17px;
+            color: orangered;
+            font-weight: 20px;
+        }
+        .footer{
+            text-align: center;
+            margin: 5px auto 
+        }
+        .footer p:hover{
+            color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="input">
+        <span class="glyphicon glyphicon-search">
+            输入商品名称
+        </span>
+        <div class="line"></div>
+    </div>
+    <div id="myCarousel" class="carousel slide">
+        <!-- 轮播（Carousel）指标 -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+        <!-- 轮播（Carousel）项目 -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="lbt0.jpg" alt="First slide">
+            </div>
+            <div class="item">
+                <img src="lbt1.jpg" alt="Second slide">
+            </div>
+            <div class="item">
+                <img src="lbt2.jpg" alt="Third slide">
+            </div>
+            <div class="item">
+                <img src="lbt3.jpg" alt="four slide">
+            </div>
+            <div class="item">
+                <img src="lbt4.jpg" alt="five slide">
+            </div>
+        </div>
+        <!-- 轮播（Carousel）导航 -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev"> <span _ngcontent-c3="" aria-hidden="true"
+                class="glyphicon glyphicon-chevron-right"></span></a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
+    <section class="lei" style=" background-color: #eee; padding: 2px">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 visible sm"></div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 visible sm"></div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 visible sm"></div>
+    </section>
+    <section style="margin:5px 2px" class="new">
+        <div class="mi-5">
+            <div class="img">
+                <img style="width:140px ;height:80px;" src="xiaomishouji5.jpg" alt="">
+                <div id="ns">
+                    <strong>新品</strong>
+                </div>
+            </div>
+            <div class="jianjie">
+                <span class="name">
+                    <p>小米手机5</p>
+                </span>
+                <span class="neirong">骁龙820处理器/4GB内存/128GB闪存/4轴防抖相机/3D陶瓷机身</span>
+                <span class="price">1999元 起</span>
+            </div>
+        </div>
+        <div class="mi-4s">
+            <div class="img">
+                <img style="width:140px ;height:80px;" src="xiaomishouji4s.jpg" alt="">
+                <div id="ns">
+                    <strong>新品</strong>
+                </div>
+            </div>
+            <div class="jianjie">
+                <span class="name">
+                    <p>小米手机4s</p>
+                </span>
+                <span class="neirong">骁龙808处理器/64GB大容量/指纹识别/全网通双卡双待/5英寸屏非凡手感</span>
+                <span class="price">1600元 起</span>
+            </div>
+        </div>
+        <div class="mi-4c">
+            <div class="img">
+                <img style="width:140px ;height:80px;" src="xiaomishouji4c.jpg" alt="">
+                <div id="ns">
+                    <strong>新品</strong>
+                </div>
+            </div>
+            <div class="jianjie">
+                <span class="name">
+                    <p>小米手机4c</p>
+                </span>
+                <span class="neirong">骁龙808处理器/64GB大容量/指纹识别/全网通双卡双待/5英寸屏非凡手感</span>
+                <span class="price">1099元 起</span>
+            </div>
+        </div>
+        <div class="mi-note">
+            <div class="img">
+                <img style="width:140px ;height:80px;" src="xiaominote.jpg" alt="">
+                <div id="ns">
+                    <strong>新品</strong>
+                </div>
+            </div>
+            <div class="jianjie">
+                <span class="name">
+                    <p>小米手机Note</p>
+                </span>
+                <span class="neirong">骁龙808处理器/64GB大容量/指纹识别/全网通双卡双待/5英寸屏非凡手感</span>
+                <span class="price">1499元 起</span>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <img src="page-item.png" alt="">
+                <p>商城</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <img src="page-item.png" alt="">
+                <p>分类</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <img src="page-item.png" alt="">
+                <p>购物车</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <img src="page-item.png" alt="">
+                <p>服务</p>
+            </div>
+        </nav>
+    </div>
+    <!-- 如果要使用bootstrap.js 一定要确保jquery.js先引入 -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+{% extends 'add.html'%}
+
+{% block con %}
+学科详情
+{% endblock %}
+
+
+
+{% block div %}
+{% block form %}
+<form class="form-horizontal" role="form" action="{% url 'detail'%}" method="POST">
+    {% csrf_token %}
+{% endblock %}
+    <div class="container" style="font-size: 30px">
+        <div>
+            学科名称 <br>
+            {{info.name}}
+        </div>
+        <div>
+            学费 <br>
+            {{info.amount}}
+        </div>
+        <div>
+            学时 <br>
+            {{info.days}}
+        </div>
+        <div>
+            承诺<br>
+            {{info.assurance}}
+        </div>
+        <div>
+            备注 <br>
+            {{info.remark}}
+        </div>
+    </div>
+</form>
+{% endblock %}

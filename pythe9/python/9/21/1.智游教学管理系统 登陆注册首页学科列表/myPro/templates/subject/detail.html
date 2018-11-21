@@ -1,0 +1,72 @@
+{% extends 'base.html'%}
+
+{% block title%}
+学科查询
+{% endblock%}
+
+{% block style%}
+<style>
+     h2{
+            margin: 0;
+            padding: 12px 0;
+            font-size: 20px;
+            background-color: lightgray;
+        }
+    .navbar{
+        margin-bottom: 0;
+    }
+    span{
+        font-weight: 600;
+        font-size: 20px;
+    }
+</style>
+{% endblock %}
+{% block main %}
+<h2>
+    <div class="container">
+        <div>学科查询</div>
+    </div>
+</h2>
+
+<div class="container">
+    <br><br>
+    <div>
+        <span>学科名称</span>
+        <br><br>
+        {{subject.name}}
+    </div>
+    <br>
+    <div>
+        <span>学费</span>
+         <br><br>
+        ￥{{subject.amount}}
+    </div>
+    <br>
+    <div>
+        <span>学时</span>
+         <br><br>
+        {{subject.days}}天
+    </div>
+    <br>
+    <div>
+        <span>承诺</span>
+         <br><br>
+        {{subject.assueance}}
+    </div>
+    <br>
+    <div>
+        <span>备注</span>
+        <br><br>
+        {{subject.remake}}
+    </div>
+    <br>
+    <div style="color: #8c8c8c;">
+        <hr>
+        {{user.username}} {{subject.create_time}} 创建
+    </div>
+    <br>
+    <div style="color: #8c8c8c;">
+        {{user1.username}} {{subject.update_time}} 更新
+    </div>
+</div>
+{% endblock %}

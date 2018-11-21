@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>作业</title>
+    <style>
+        body{
+            width: 600px;
+            height: 500px;
+            margin: 20px auto;
+            border: 1px solid black
+        }
+        div.header{
+            width: 100%;
+            height: 80px;
+            text-align: center;
+        }
+        div>img{
+            margin-top: 15px;
+        }
+        main{
+            width: 100%;
+            height: 25px;
+            position: relative;
+        }
+        span hr:nth-child(1){
+            position: absolute;
+            right:400px ;
+            width: 80px;
+            top: 2px;
+        }
+        span hr:nth-child(2){
+            position: absolute;
+            left:400px ;
+            width: 80px;
+            top: 2px;
+        }
+        p{
+            text-align: center;
+            font-size: 15px;
+            color: gray;
+            margin-top: 0;
+        }
+        div.info{
+            width: 600px;
+            height: 85px;
+ 
+        }
+        a{
+            float: left;
+            margin-left: 10px;
+            position: relative;
+            left: 110px;
+        }
+        div.input{
+            height: 30px;
+            width: 600px;
+            margin: 0;
+            position: relative;
+        }
+        span hr:nth-child(3){
+            position: absolute;
+            left:400px ;
+            width: 80px;
+            top: 2px;
+        }
+        span hr:nth-child(4){
+            position: absolute;
+            right:400px ;
+            width: 80px;
+            top: 2px;
+        }
+        form{
+            width: 100%;
+            height: 200px;
+            text-align: center; 
+            position: relative; 
+        }
+        input{
+            font-size: 30px;
+            -webkit-text-fill-color: darkgray;
+        }
+        #text_{
+            position: relative;
+            bottom: 0px;
+        }
+        .register{
+            position: relative;
+            left: 120px;
+        }
+        #red-link{
+            
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="花瓣.png" alt="">
+    </div>
+    <main>
+        <span>
+            <hr>
+            <hr>
+            <p>使用第三方工具登录</p>
+        </span>
+    </main>
+    <div class="info">
+        <span>
+            <a target="_blank" href="https://api.weibo.com/oauth2/authorize?client_id=2499394483&response_type=code&redirect_uri=http%3A%2F%2Fhuaban.com%2Foauth%2Fcallback%2F&display=default"><img src="新浪.png" alt=""></a>
+            <a target="_blank" href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&client_id=100240394&response_type=code&redirect_uri=http%3A%2F%2Fhuaban.com%2Foauth%2Fcallback%2F&scope=get_user_info%2Cadd_topic%2Cget_info%2Cget_fanslist%2Cget_idolist%2Cadd_idol%2Ccheck_page_fans"><img src="QQ.png" alt=""></a>
+            <a target="_blank" href="https://open.weixin.qq.com/connect/qrconnect?appid=wxadc3342faa49acef&response_type=code&redirect_uri=https%3A%2F%2Fhuaban.com%2Foauth%2Fcallback%2F&scope=snsapi_login&state=STATE#wechat_redirect"><img src="ww.png" alt=""></a>
+            <a target="_blank" href="https://www.douban.com/service/auth2/auth?client_id=0dc8f880d70527ff295ae982850f77fd&response_type=code&redirect_uri=http%3A%2F%2Fhuaban.com%2Foauth%2Fcallback%2F"><img src="豆瓣.png" alt=""></a>
+            <a target="_blank" href="http://graph.renren.com/oauth/grant?client_id=4dabeb4836e8467a9d212d0fea33da7a&redirect_uri=http%3A%2F%2Fhuaban.com%2Foauth%2Fcallback%2F&response_type=code&display=page&scope=publish_share+status_update+publish_feed+photo_upload&secure=true&origin=00000"><img src="人人网.png" alt=""></a>
+        </span>
+    </div>
+    <div class="input">
+        <span>
+            <hr>
+            <hr>
+            <p>使用手机号/邮箱登录</p>
+        </span>
+    </div>
+    <form action="">
+        <input type="text" placeholder="输入手机号或者邮箱">
+        <br>
+        <br>
+        <input type="password" placeholder="密码">
+        <br>
+        <br>
+        <input style="background:red;color:#fff;width: 370px;" type="submit" class="submit" value="登录" >
+    </form>
+    <a id="text_" class="reset-password red-link">忘记密码<<</a>
+    <div class="register">
+        还没有花瓣账号？
+        <a id="red-link">点击注册</a>
+    </div>
+</body>
+</html>

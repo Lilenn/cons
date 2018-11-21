@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+
+{% block title%}
+    登录
+{% endblock%}
+
+{% block main %}
+<div class="container">
+    <h2 class="text-center">请输入登录信息</h2>
+    <form class="form-horizontal" role="form" action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="inputName" class="col-sm-2 control-label">邮箱</label>
+            <div class="col-sm-10">
+                <input name="email" type="text" class="form-control" id="inputName" placeholder="请输入邮箱">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-sm-2 control-label">密码</label>
+            <div class="col-sm-10">
+                <input name="password" type="text" class="form-control" id="inputPassword" placeholder="请输入密码">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="" class="col-sm-2 control-label">&#x3000;</label>
+            <div class="col-sm-10" style="display: flex;justify-content: space-between">
+                <a href="/register">注册新用户</a>
+            </div>
+        </div>
+        <div class="form-group">
+            <h3>{{login_form.errors.email}}</h3>
+            <h3>{{login_form.errors.password}}</h3>
+            <h3>{{msg}}</h3>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button  type="submit" class="btn btn-default btn-success btn-block">登 录</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

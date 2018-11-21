@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>留言板</title>
+
+    <style>
+        .border 
+        {
+            border: 1px solid black ;
+
+            margin: 5px;
+
+            padding: 10px;
+
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>共和国小青年的留言板</h1>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <br><br>
+    <button onclick="submit()">留言</button>
+
+    <script>
+
+        var text = document.querySelector('textarea');
+
+        function submit()
+        {
+            var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function()
+            {
+                if(xhr.readyState == 4)
+                {
+                    console.log('服务器返回:' + xhr.responseText)
+
+                    window.location.href = 'http://localhost:8080'
+                }
+            }
+
+            var time = new Date();
+
+            var date = time.getFullYear() + '年'  + (time.getMonth() + 1)
+                      + '月' + time.getDate() + '日 ' + time.getHours() 
+                      + ':' + time.getMinutes()+ ':' + time.getSeconds(); 
+
+            var message = text.value;
+
+            xhr.open('post','/sendMessage')
+
+            xhr.setRequestHeader('Content-Type',
+            'application/x-www-form-urlencoded')
+
+            xhr.send('content=' + message + '&time=' + date)
+
+        }
+
+
+        getAllMessage();
+
+        function getAllMessage()
+        {
+            var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function()
+            {
+                if(xhr.readyState ==4 )
+                {
+                    // 声明一个数组 用来接收从服务器返回的所有留言
+                    var allMessage = JSON.parse(xhr.responseText)
+
+                    console.log(allMessage);
+
+                    for(var index = 0 ; index < allMessage.length; index++)
+                    {
+                        var div = document.createElement('div');
+                        // 分别获取每一个留言
+                        var message = allMessage[index];
+                        // 将日期格式的字符串 转换成对应的日期（message.time为字符串）
+                        // var currentTime = new Date(message.time);
+                        
+                        // console.log(currentTime)
+
+                        div.className = 'border'
+
+                        div.innerHTML = '留言时间:' + message.time +  '<br>' + 
+                                       '留言内容:' + message.content;
+
+                        document.body.appendChild(div)
+                    }
+                }
+            }
+
+            xhr.open('get','/getAllMessage')
+
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

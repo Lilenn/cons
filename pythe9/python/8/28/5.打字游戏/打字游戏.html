@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="animate.css">
+    <title>打字游戏</title>
+    <style>
+        html,body{
+            height: 100%;
+            margin: 0;
+            background-color: black;
+        }
+        body{
+            /* 设置背景为径向渐变  默认为 椭圆形
+            linear-gradient 线性渐变*/
+            background: radial-gradient(circle,#666 ,#000 ,#000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        #char{
+            font-size: 400px;
+            color: greenyellow;
+            text-shadow: 0px 0px 15px red;
+        }
+        #result{
+            font-size: 40px;
+            color: red;
+        }
+        /* 当id名字为char的标签类名为error的时候 */
+        #char.error{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="char">H</div>
+        <div id="result">正确个数0，错误个数0，正确率100%</div>
+    </main>
+    <!-- <script src="jquery.js"></script> -->
+    <script>
+        var char = document.getElementById('char')
+        var result = document.getElementById('result')
+        
+        var code = 0
+        var okCount = 0
+        var errorCount = 0
+
+        function showChar()
+        {
+            var random = Math.random() * 26
+            // 0~25   65 ~90  A~Z
+            random = Math.floor(random) +65
+            // 获取数字在ASCII表中所对应的字母
+            var zimu = String.fromCharCode(random)
+            code = random
+
+            char.innerText = zimu
+
+        }
+        showChar()
+
+        window.onkeyup = function(e)
+        {
+            var keyCode = e.keyCode
+            // 如果字母一致
+            if(keyCode == code){
+                 // 重新出现一个新的字母
+                showChar()
+                // 正确数量增加
+                okCount ++  
+                // 出现动画
+                char.className = 'animated zoomIn'
+                // 延时0.5秒钟之后清除动画效果 
+                // 否则标签一直有之前 的动画效果 那么就不在执行新的动画
+                setTimeout(clearAnimation,500)
+            }
+            else{
+                errorCount ++
+
+                char.className = 'animated shake error'
+                // char.style.color = 'red'
+
+                setTimeout(clearAnimation,500)
+            }
+
+            percent = okCount / (okCount + errorCount) * 100
+
+            result.innerText = '正确个数是'+okCount + ', 错误个数是'
+               + errorCount + ', 正确率是' + percent.toFixed +'%'
+
+        }
+        function clearAnimation(){
+            char.className = 'animated'
+            char.style.color = 'yellowgreen'
+        }
+
+        // 1.获取键盘的事件
+        // 2.对比按下的键 和 屏幕上显示的字母是否一致
+        // 3. 一致 出现随机字母  ， 动画(添加类名)， 正确率
+        // 4.不一致 动画（添加类名） 正确率
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>删除数据</title>
+    <link rel="stylesheet" href="/static/message.css">
+</head>
+<body>
+    <main>
+        <form action="{{url}}" method="POST">
+            {% csrf_token %}
+            <label for="">ID</label>
+            <br>
+            <input name="id" type="text" placeholder="请输入需要删除的数据ID">
+            <br>
+            <button type="submit">删除数据</button>
+        </form>
+    </main>
+</body>
+</html>

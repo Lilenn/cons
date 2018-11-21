@@ -1,0 +1,14 @@
+{% load test %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板</title>
+</head>
+<body>
+    <h1>{{name}}</h1>
+    <h2>现在时间：{{teday | date:'Y:m:d h:i:s'}}</h2>
+    <h3>我的朋友是{{friend.name}},年龄为{{friend.age}}岁</h3>
+    <h3>我的爱好是:{{fond_list}}</h3>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1>共和国小青年的留言板</h1>
+        <textarea name="cnt" id="" cols="30" rows="10"></textarea>
+        <br><br>
+        <button onclick="insertInfro()">留言</button>
+        </main>
+    <script>
+        var cnt = document.getElementsByName('cnt')[0]
+        function insertInfro() {
+
+            var time = new Date()
+            var currentTime = time.getFullYear() + '年' + (time.getMonth() + 1) +
+                '月' + time.getDate() + '日' + (time.getHours < 10 ? '0' + tiem.getHours() : time.getHours()) +
+                ':' + (time.getMinutes() < 10 ? '0' + time.getMinutes() : time.getMinutes()) +
+                ':' + (time.getSeconds() < 10 ? '0' + time.getSeconds() : time.getSeconds())
+
+
+            var xhr = new XMLHttpRequest()
+            var form = new FormData()
+
+            form.append('cnt', cnt.value)
+            form.append('time', currentTime)
+
+
+            xhr.open('post', '/text')
+
+            xhr.send(form)
+
+            var main = document.createElement('main')
+            main.style.border = '1px solid black'
+
+            document.body.appendChild(main)
+
+            main.innerText = ''
+
+            var xhr = new XMLHttpRequest()
+            xhr.open('get', '/getInfo')
+            xhr.send()
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    var obj = xhr.responseText
+                    var infoString = obj.substring(0, obj.length - 2)
+                    var allInfo = '[' + infoString + ']'
+                    var jsonInfo = JSON.parse(allInfo)
+
+                    var con = ''
+                    for (var index = 0; index < jsonInfo.length; index ++) {
+                        var info = jsonInfo[index]
+                        con = '留言时间：' + info.time + '<br>' + '留言内容:' + info.cnt + '<br>'
+                    }
+                    main.innerHTML = con
+                }
+                
+            }
+
+        }
+    </script>
+</body>
+
+</html>

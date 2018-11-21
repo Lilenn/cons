@@ -1,0 +1,35 @@
+[INFO  - 2018-08-17T11:14:40.056Z] GhostDriver - Main - running on port 53657
+[INFO  - 2018-08-17T11:14:44.557Z] Session [be950840-a20e-11e8-9900-cf43759adf81] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2018-08-17T11:14:44.557Z] Session [be950840-a20e-11e8-9900-cf43759adf81] - page.customHeaders:  - {}
+[INFO  - 2018-08-17T11:14:44.558Z] Session [be950840-a20e-11e8-9900-cf43759adf81] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-7-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2018-08-17T11:14:44.558Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: be950840-a20e-11e8-9900-cf43759adf81
+[INFO  - 2018-08-17T11:19:40.057Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
+or: undefined is not an object (evaluating '(u=document.getElementsByTagName("meta")).description.setAttribute')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-08-17T11:14:57.057Z] Session [baf5e880-a20e-11e8-9af1-4db7f94ff3bf] - page.onError - stack:
+  (anonymous function) (https://desktop-bucket.zhaopin.cn/index.web.ad4949.js:21)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-08-17T11:16:38.720Z] Session [baf5e880-a20e-11e8-9af1-4db7f94ff3bf] - page.onError - msg: TypeError: null is not an object (evaluating 'iframe.parentNode')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-08-17T11:16:38.720Z] Session [baf5e880-a20e-11e8-9af1-4db7f94ff3bf] - page.onError - stack:
+  byyy (https://eb.szlhgx.com/if/zi1l.js:35)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-08-17T11:16:56.345Z] Session [baf5e880-a20e-11e8-9af1-4db7f94ff3bf] - page.onError - msg: TypeError: null is not an object (evaluating 'iframe.parentNode')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-08-17T11:16:56.345Z] Session [baf5e880-a20e-11e8-9af1-4db7f94ff3bf] - page.onError - stack:
+  byyy (https://eb.szlhgx.com/if/zi1l.js:35)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-08-17T11:18:46.573Z] Session [baf5e880-a20e-11e8-9af1-4db7f94ff3bf] - page.onError - msg: TypeError: null is not an object (evaluating 'document.getElementById("showblank").style')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2018-08-17T11:18:46.574Z] Session [baf5e880-a20e-11e8-9af1-4db7f94ff3bf] - page.onError - stack:
+  global code (http://special.zhaopin.com/pagepublish/45551943/index.html:394)
+
+  phantomjs://platform/console++.js:263 in error
+[INFO  - 2018-08-17T11:19:33.990Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW

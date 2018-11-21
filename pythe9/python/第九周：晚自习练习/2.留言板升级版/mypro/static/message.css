@@ -1,0 +1,47 @@
+html,body{
+    height: 100%;
+    margin: 0;
+}
+main{
+    border: 1px solid black;
+    width: 500px;
+    margin: 100px auto;
+    background-color: #66aabf;
+}
+header{
+    color: white;
+    text-align: center;
+    background-color: #5bc0de;
+    height: 90px;
+    padding-top: 20px;
+
+}
+h2,h4{
+    /*去掉加粗效果*/
+    font-weight: normal;
+    margin: 5px;
+}
+form{
+    /*border: 1px solid red;*/
+    width: 90%;
+    margin: 0 auto;
+}
+label{
+    color: gray;
+}
+input{
+    width: 99%;
+    height: 25px;
+}
+textarea{
+    width: 99%;
+    height: 60px;
+    /*不能设置大小*/
+    resize: none;
+}
+.message_item{
+    border: 1px solid black;
+    width: 80%;
+    margin: 10px auto;
+
+}

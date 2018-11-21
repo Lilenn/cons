@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <title>商城分类</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #eee;
+            box-sizing: border-box;
+        }
+
+        .title {
+            height: 80px;
+            /* border: 1px solid black; */
+            font-size: 25px;
+        }
+        .title div{
+            height: 64px;
+            margin: 20px;
+            color: gray;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .phone-list {
+            border: 1px solid black;
+            height: 500px;
+            margin: 0 16px 16px;
+            text-align: center;
+        }
+
+        .phone-list span {
+            position: relative;
+            top: 20px;
+        }
+
+        .img-list {
+            display: flex;
+            /* justify-content:center; */
+            /* align-items: stretch; */
+            flex-wrap: wrap;
+            flex-direction: row;
+            position: relative;
+            top: 40px;
+        }
+
+        .image {
+            display: inline-block;
+            float: left;
+            flex-grow: 3;
+        }
+
+        .img {
+            padding: 10px;
+        }
+
+        .tv {
+            border: 1px solid black;
+            height: 500px;
+            margin: 0 16px 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title">
+        <div class="form-group">
+            <label for="firstname" class="col-sm-2 control-label"><img style="width:40px;hright:40px" src="icon-back.png" alt=""></label>
+            
+            <span class="glyphicon glyphicon-search"></span>
+        </div>
+    </div>
+    <section style="background-color:white;" class="phone-list">
+        <span style="font-size:1.5em;font-weight:25px">手机/平板/电话卡</span>
+        <div class="img-list">
+            <div class="image">
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl1-1.png" alt="">
+                    <p style="font-size:15px">小米5</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl1-5.png" alt="">
+                    <p style="font-size:15px">小米4c</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl1-9.png" alt="">
+                    <p style="font-size:15px">红米Note</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl1-13.png" alt="">
+                    <p style="font-size:15px">电信手机</p>
+                </div>
+            </div>
+            <div class="image">
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl1-2.png" alt="">
+                    <p style="font-size:15px">小米4s</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl1-6.png" alt="">
+                    <p style="font-size:15px">小米4</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl1-10.png" alt="">
+                    <p style="font-size:15px">红米2A</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl1-14.png" alt="">
+                    <p style="font-size:15px">官翻机</p>
+                </div>
+            </div>
+            <div class="image">
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl1-4.png" alt="">
+                    <p style="font-size:15px">小米Note</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl1-7.png" alt="">
+                    <p style="font-size:15px">红米3</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl1-11.png" alt="">
+                    <p style="font-size:15px">红米2</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl1-15.png" alt="">
+                    <p style="font-size:15px">小米移动</p>
+                </div>
+            </div>
+            <div class="image">
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl1-4.png" alt="">
+                    <p style="font-size:15px">小米Note顶配</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl1-2.png" alt="">
+                    <p style="font-size:15px">红米Note3</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl1-12.png" alt="">
+                    <p style="font-size:15px">小米平板</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="tv" style="background-color:white">
+        <span style="font-size:1.5em;font-weight:25px;position: relative;top: 20px;">电视/盒子</span>
+        <div class="img-list">
+            <div class="image">
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl2-1.png" alt="">
+                    <p style="font-size:15px">小米电视</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl2-2.png" alt="">
+                    <p style="font-size:15px">小米电视</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl2-3.png" alt="">
+                    <p style="font-size:15px">小米电视</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl2-4.png" alt="">
+                    <p style="font-size:15px">小米电视</p>
+                </div>
+            </div>
+            <div class="image">
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl2-5.png" alt="">
+                    <p style="font-size:15px">小米电视</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl2-6.png" alt="">
+                    <p style="font-size:15px">小米电视</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl2-7.png" alt="">
+                    <p style="font-size:15px">小米盒子</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl2-8.png" alt="">
+                    <p style="font-size:15px">小米盒子</p>
+                </div>
+            </div>
+            <div class="image">
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl2-9.png" alt="">
+                    <p style="font-size:15px">小米盒子</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl2-10.png" alt="">
+                    <p style="font-size:15px">小米盒子</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl2-11.png" alt="">
+                    <p style="font-size:15px">游戏手柄</p>
+                </div>
+                <div class="img">
+                    <img style="width:60px;height:60px" src="fl2-12.png" alt="">
+                    <p style="font-size:15px">小米眼镜</p>
+                </div>
+            </div>
+    </section>
+    <div class="footer">
+        <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <img src="page-item.png" alt="">
+                <p>商城</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <img src="page-item.png" alt="">
+                <p>分类</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <img src="page-item.png" alt="">
+                <p>购物车</p>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <img src="page-item.png" alt="">
+                <p>服务</p>
+            </div>
+        </nav>
+    </div>
+    <!-- 如果要使用bootstrap.js 一定要确保jquery.js先引入 -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

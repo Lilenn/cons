@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>display实战</title>
+    <style>
+        html{
+            height: 100%;
+            overflow: hidden;
+        }
+        body{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 15px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            /* 设置自己的位子 */
+            /* align-self:; */
+        }
+        div{
+            width:50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color:black;
+        }
+        section{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        #si main{
+            flex-wrap: wrap;
+        }
+
+        #si div:nth-child(1){
+            align-self: flex-start;
+        }
+        #si div:nth-child(2){
+            align-self: center;
+        }
+        #si div:nth-child(3){
+            align-self: flex-end;
+        }
+        
+    </style>
+</head>
+<body>
+    <main id="liu">
+       <section>
+           <div></div>
+           <div></div>
+       </section>
+       <section>
+           <div></div>
+           <div></div>
+       </section>
+       <section>
+           <div></div>
+           <div></div>
+       </section>
+    </main>
+    <main id="wu">
+            <section>
+                <div></div>
+                <div></div>
+            </section>
+            <section>
+                <div></div>
+            </section>
+            <section>
+                <div></div>
+                <div></div>
+            </section>
+    </main>
+    <main id="si">
+            <section>
+                <div></div>
+                <div></div>
+            </section>
+            <section>
+                <div></div>
+                <div></div>
+            </section>
+    </main>
+    <main id="san">
+        <div></div>
+        <div></div>
+        <div></div>
+    </main>
+    <main id="two">
+        <div></div>
+        <div></div>
+    </main>
+</body>
+</html>

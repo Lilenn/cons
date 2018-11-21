@@ -1,0 +1,106 @@
+@charset  "UTF-8";
+
+.glint{
+    animation-name: glint;
+    -webkit-animation-name: glint;
+}
+@keyframes glint{
+    from,
+    25%,
+    75%{
+        opacity: 0;
+    }
+    50%,
+    to{
+        opacity: 1;
+    }
+}
+@-webkit-keyframes glint{
+    from,
+    25%,
+    75%{
+        opacity: 0;
+    }
+    50%,
+    to{
+        opacity: 1;
+    }
+}
+.scale{
+    animation-name: scale;
+    -webkit-animation-name: scale;
+}
+@keyframes scale{
+    from{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(2.0);
+    }
+    to{
+        transform: scale(1);
+    }    
+}
+.input{
+    animation-name: input;
+    -webkit-animation-name: input;
+}
+@keyframes input{
+    from{
+        opacity: 0;
+        transform: rotate(0deg) translateZ(0px);
+    }
+    50%{
+        opacity: 0.5;
+        transform: rotate(360deg) translateZ(200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateZ(0px);
+    }
+}
+@-webkit-keyframes input{
+    from{
+        opacity: 0;
+        transform: rotate(0deg) translateZ(0px);
+    }
+    50%{
+        opacity: 0.5;
+        transform: rotate(360deg) translateZ(200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateZ(0px);
+    }
+}
+.flyin{
+    animation-name: flyin;
+}
+@keyframes flyin{
+    from{
+        transform: translate3d(200%,100%,120%) scale3d(0.5,0.5,0.5);
+        opacity: 0;
+    }
+    50%{
+        transform:scale3d(1.5,1.5,1.5) ;
+        opacity: 0.5;
+    }
+    tp{
+        transform: translate3d(0,0,0) scale3d(1,1,1);
+        opacity: 1;
+    }
+}
+.animate{
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+}
+.animate.infinite{
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+.animate.delay-2s{
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+}

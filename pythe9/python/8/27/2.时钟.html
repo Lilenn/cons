@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>时钟</title>
+    <style>
+        html,body{
+            margin:0;
+            height: 100%;
+            background-color: black;
+        }
+        #shijian{
+            font-size: 150px;
+            color: yellow;
+        }
+        #riqi{
+            font-size: 40px;
+            color:yellowgreen;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="shijian">12:12:12</div>
+        <div id="riqi">2013年12月12日 星期二</div>
+    </main>
+    <script>
+        // document 文档 get 获取 Element 元素 ;节点；标签
+        shijian = document.getElementById('shijian')
+
+        riqi = document.getElementById('riqi')
+                          
+        function showTime(){
+            // 获取当前的时间
+            var time = new Date()
+            // alert(time)
+
+            var hour = time.getHours()
+   
+            var minute = time.getMinutes()
+
+            var second = time.getSeconds()
+            
+            console.log(hour)
+            console.log(minute)
+            console.log(second)
+
+            // var year = time.getYear() + 1900
+            var year = time.getFullYear()
+            console.log(year)
+            // 获取的是当前月数的索引值
+            var month = time.getMonth() + 1
+            console.log(month)
+            var date =time.getDate()
+            console.log(date)
+            var week = time.getDay()
+            console.log(week)
+            // string() 数字转字符串
+            // parseInt()  转整数
+            if (hour < 10)
+            {
+                hour = '0' + hour
+            }
+            if(minute < 10)
+            {
+                minute = '0' + minute
+            }
+            if (second < 10)
+            {
+                second = '0' + second
+            }
+            shijian.innerText = hour + ':'+ minute + ':' + second
+
+            switch(week)
+            {
+                case 1 :{
+                    week ='一'
+                    break;
+                }
+                case 2 :{
+                    week ='二'
+                    break;
+                }
+                case 3 :{
+                    week ='三'
+                    break;
+                }
+                case 4 :{
+                    week ='四'
+                    break;
+                }
+                case 5 :{
+                    week ='五'
+                    break;
+                }
+                case 6 :{
+                    week ='六'
+                    break;
+                }
+                case 0 :{
+                    week ='日'
+                    break;
+                }
+            }
+            riqi.innerText = year + '年' + month +'月' + date + '日 星期' + week
+        }
+        showTime()
+        // Interval 时间间隔
+        // 参数1：调用的方法
+        // 参数2:时间间隔 单位为毫秒
+        setInterval(showTime , 1000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% extends 'base.html'%}
+
+{% block title%}
+教学大纲管理系统
+{% endblock %}
+
+{% block style%}
+<style>
+    main{
+        border: 1px solid lightgray;
+    }
+    main>div{
+        border-bottom: solid 1px lightgray;
+        background-color: lightgray;
+
+    }
+    main>div:nth-last-child{
+        border-bottom: none;
+    }
+</style>
+{% endblock %}
+
+{% block main%}
+<div class="container">
+    <h2 class="text-center">二级大纲</h2>
+    <br>
+    {% for program in programs %}
+    <main>
+        <div style="display: flex;justify-content: space-between">
+            第{{program.number}}天 {{program.sing}}
+            <span>
+                <a href="/program/detail/?program_id={{program.id}}&outline_id={{outline.id}}"><span class="glyphicon glyphicon-list"></span></a>
+                <a href="/program/edit/?program_id={{program.id}}"><span class="glyphicon glyphicon-edit"></span></a>
+                <a href="/program/delete/?program_id={{program.id}}"><span class="glyphicon glyphicon-remove-circle"></span></a>
+            </span>
+        </div>
+        <div style="background-color: white">{{program.digest}}</div>
+        {% for outline in outlines %}
+        <div>{{outline.title}}</div>
+        {% endfor %}
+    </main>
+    <br>
+    {% endfor %}
+    <br>
+    <div class="text-center">
+        <a href="/program/add/">
+            <span class="glyphicon glyphicon-plus-sign"></span>
+        </a>
+    </div>
+</div>
+{% endblock %}

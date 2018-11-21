@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+
+{% block title%}
+教学大纲管理系统
+{% endblock %}
+
+{% block style%}
+
+{% endblock %}
+
+{% block main%}
+<div class="container">
+    <h2 class="text-center">学科</h2>
+    {% for subjects in subjects %}
+    <div class="text-center">{{subjects.name}}&#x3000; (￥{{subjects.amount}} , {{subjects.days}}天)
+        <a href="/subject/detail/?subject_id={{subjects.id}}"><span class="glyphicon glyphicon-list"></span></a>
+        <a href="/subject/edit/?subject_id={{subjects.id}}"><span class="glyphicon glyphicon-edit"></span></a>
+        <a href="/subject/delete/?subject_id={{subjects.id}}"><span class="glyphicon glyphicon-remove-circle"></span></a>
+        <a href="/stage/list/?subject_id={{subjects.id}}">阶段</a>
+    </div>
+    <br>
+    {% endfor %}
+    <div class="text-center">
+        <a href="/subject/add/">
+            <span class="glyphicon glyphicon-plus-sign"></span>
+        </a>
+    </div>
+</div>
+{% endblock %}

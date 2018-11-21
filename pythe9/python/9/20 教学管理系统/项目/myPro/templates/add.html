@@ -1,0 +1,78 @@
+{% extends 'base.html'%}
+
+{% block style%}
+<style>
+    h2{
+        width:100%;
+        height:45px;
+        background-color: lightgray;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 50px;
+        margin-top: 0;
+    }
+    .navbar{
+        margin-bottom: 0;
+    }
+    form{
+        position: relative;
+        left:100px;
+    }
+</style>
+{% endblock%}
+
+{% block main %}
+<h2>
+    <div id="title" class="container">
+        {% block con %}添加学科{% endblock%}
+    </div>
+</h2>
+{% block div %}
+    {% block form %}
+    <form class="form-horizontal" role="form" action="{% url 'add'%}" method="POST">
+        {% csrf_token %}
+    {% endblock %}
+        <div class="form-group">
+            <label for="uname" class="col-sm-2 control-label">名称： </label>
+            <div class="col-sm-3">
+                <input name="name" type="text" class="form-control" id="uname" placeholder="请填写学科名称">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="amount" class="col-sm-2 control-label">学费： </label>
+            <div class="col-sm-2">
+                <input name="amt" type="number" class="form-control" id="amount" placeholder="0">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="days" class="col-sm-2 control-label">学时： </label>
+            <div class="col-sm-2">
+                <input name="day" type="text" class="form-control" id="days" placeholder="0">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="rank" class="col-sm-2 control-label">排序： </label>
+            <div class="col-sm-2">
+                <input name="solt" type="text" class="form-control" id="rank" placeholder="0">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="assurance" class="col-sm-2 control-label">承诺： </label>
+            <div class="col-sm-7">
+                <input name="asc" type="text" class="form-control" id="assurance" placeholder="请填写薪金承诺">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="remark" class="col-sm-2 control-label">备注： </label>
+            <div class="col-sm-6">
+                <textarea name="ps" id="remark" cols="100" rows="10" placeholder="请填写备注"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-3">
+                <button type="submit" class="btn btn-success btn-block">提交</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}
+{% endblock%}

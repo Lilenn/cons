@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <title>服务</title>
+    <style>
+        html,
+        body {
+            background-color: rgba(238, 238, 238, 0.774);
+            margin: 0;
+        }
+
+        header {
+            height: 15vw;
+            border-bottom: 1px solid lightgray;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        header div {
+            width: 15vw;
+            height: 100%;
+
+            text-align: center;
+            line-height: 15vw;
+            font-size: 4vw;
+            color: gray;
+        }
+
+        header div:nth-child(2) {
+            width: 25vw;
+        }
+
+        main {
+            height: 25vw;
+            background-color: rgb(255, 102, 0);
+            text-align: center;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .out {
+            width: 23vw;
+            height: 23vw;
+            border: 1px solid whitesmoke;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 6.5vw;
+            background-color: white;
+        }
+
+        .in {
+            width: 21.5vw;
+            height: 21.5vw;
+            border: 1px solid rgba(255, 123, 0, 0.185);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14vw;
+        }
+
+        #list {
+            height: 35vw;
+            margin-bottom: 5vw;
+            background-color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .list {
+            height: 25vw;
+            padding: 5vw;
+            border-right: 1px solid rgba(211, 211, 211, 0.432);
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .list span {
+            font-size: 9vw;
+            opacity: 0.6;
+        }
+
+        .e {
+            width: 20vw;
+            height: 7vw;
+            font-size: 4vw;
+            position: relative;
+            left: 2vw;
+            padding: 2vw 0;
+        }
+
+        .line {
+            width: 8vw;
+            border-bottom: 1px solid rgba(241, 6, 84, 0.486);
+            /* border-bottom-width: 1vw ; */
+            position: relative;
+            top: 3vw;
+            left: 8vw;
+        }
+
+        #content {
+            height: 15vw;
+            background-color: white;
+            border-bottom: 1px solid rgba(211, 211, 211, 0.507);
+            display: flex;
+            align-items: center;
+            padding: 4vw;
+        }
+
+        .little {
+            height: 9vw;
+            width: 9vw;
+            font-size: 15vw;
+            opacity: 0.5;
+            overflow: hidden;
+        }
+
+        .fun {
+            height: 9vw;
+            line-height: 9vw;
+            padding-left: 3vw;
+            font-size: 4.4vw;
+        }
+
+        footer {
+            display: flex;
+            height: 16vw;
+            justify-content: space-around;
+            padding-top: 1vw;
+            box-sizing: border-box;
+            border-top: 1px solid lightgray;
+            background-color: white;
+            position: fixed;
+            bottom: 0;
+            z-index: 999;
+            width: 100%
+        }
+
+        footer div {
+            width: 13vw;
+            height: 100%;
+            text-align: center;
+            font-size: 4vw;
+        }
+
+        footer img {
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </div>
+        <div>个人中心</div>
+        <div>
+            <span class="glyphicon glyphicon-search"></span>
+        </div>
+    </header>
+    <main id="title">
+        <div class="out">
+            <div class="in">
+                <span style="opacity:0.3" class="glyphicon glyphicon-user"></span>
+            </div>
+        </div>
+    </main>
+    <section id="list">
+        <div class="list">
+            <span class="glyphicon glyphicon-list-alt"></span>
+            <div class="e">全部订单</div>
+            <div class="line"></div>
+        </div>
+        <div class="list">
+            <span class="glyphicon glyphicon-list-alt"></span>
+            <div class="e">待付款</div>
+            <div style="border-bottom-color:rgb(117, 230, 117)" class="line"></div>
+        </div>
+        <div class="list">
+            <span class="glyphicon glyphicon-list-alt"></span>
+            <div class="e">待收货</div>
+            <div style="border-bottom-color:rgb(247, 153, 72)" class="line"></div>
+        </div>
+    </section>
+    <div id="content">
+        <div class="little">
+            <span class="glyphicon glyphicon-list-alt"></span>
+        </div>
+        <div class="fun">我的优惠</div>
+    </div>
+    <div id="content" style="border-bottom:none">
+        <div class="little">
+            <span class="glyphicon glyphicon-list-alt"></span>
+        </div>
+        <div class="fun">F码通道</div>
+    </div>
+    <div id="content" style="border-bottom:none;margin: 5vw 0;">
+        <div class="little">
+            <span class="glyphicon glyphicon-list-alt"></span>
+        </div>
+        <div class="fun">我的服务</div>
+    </div>
+    <div id="content" style="border-bottom:none">
+        <div class="little">
+            <span class="glyphicon glyphicon-list-alt"></span>
+        </div>
+        <div class="fun">设置</div>
+    </div>
+    <footer>
+        <div>
+            <img src="image/page-item.png" alt="">
+            <br> 商城
+        </div>
+        <div>
+            <img src="image/page-item.png" alt="">
+            <br> 分类
+        </div>
+        <div>
+            <img src="image/page-item.png" alt="">
+            <br> 购物车
+        </div>
+        <div>
+            <img src="image/page-item.png" alt="">
+            <br> 服务
+        </div>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+
+</html>

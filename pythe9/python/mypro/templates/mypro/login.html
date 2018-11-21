@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}
+    登陆页面
+{% endblock %}
+
+{% block content %}
+    <h2>登陆页面</h2>
+    <p>请在下面输入框中输入您的用户名和密码：</p>
+    <form action="." method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="登陆">
+    </form>
+
+{% endblock %}

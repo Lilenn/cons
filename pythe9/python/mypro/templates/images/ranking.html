@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    热门图片
+{% endblock %}
+
+{% block content %}
+    <h1>热门图片</h1>
+    <ol>
+        {% for image in most_viewd %}
+            <li>
+                <a href="{{ image.get_absolute_url }}">{{ image.title }}</a>
+            </li>
+        {% endfor %}
+    </ol>
+{% endblock %}

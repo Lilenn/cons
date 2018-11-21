@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>大风车</title>
+    <style>
+        body{
+            margin: 0 
+        }
+        main{
+            width: 1300px;
+            height: 500px;
+            border: 1px solid red;
+            margin: 0 auto;
+            /* 背景图尺寸默认为图片大小 */
+            background-image: url(caodi.png);
+            /* 设置背景图的大小：
+            值1：表示 宽的大小
+            值2：表示 高的大小 */
+            background-size: 1300px 500px;
+            /* 定位属性 会使定宽居中失效
+            绝对定位和固定定位适用 */
+            /* position: absolute;
+            bottom: 0; */
+            position: relative;;
+        }
+        section{
+            border:10px solid red;
+            margin: 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        div{
+            width: 350px;
+            height: 350px;
+            background-image: url(fengche.png);
+            /* contain: 包含；合适
+            自动调整图片大小，以达到适合标签大小的目的 */
+            background-size: contain;
+            position: absolute;
+            left: 265px;
+            top: 65px;
+            /* animation-name: xiazhuan; */
+            /* animation-duration: 2s; */
+            /* 设置动画运动速率 linear 匀速 */
+            /* animation-timing-function: linear; */
+            /* 设置动画的运动次数 infinite 永不停止 */
+            /* animation-iteration-count: infinite; */
+            animation: xiazhuan 2s linear infinite;
+        }
+        /* 获取所有div的第二个 */
+        div:nth-child(2){
+            width: 150px;
+            height: 150px;
+            left: 591px;
+            top: 290px;
+           animation-duration: 2s;
+        }
+        div:nth-child(3){
+            width: 200px;
+            height: 200px;
+            left: 755px;
+            top: 210px;
+            animation-duration: 2s;
+        }
+        /* 当鼠标放到div标签的时候。。 */
+        div:hover{
+            animation-duration: 0.2s;
+        }
+        div:active{
+            animation-name: none;
+            animation-duration: 0;
+        }
+        @keyframes xiazhuan{
+            0%{
+                /* 变换 
+                rotate 旋转   degree 角度*/
+                transform: rotate(0deg)
+            }
+            100%{
+                transform: rotate(360deg)
+            }
+        }
+        
+    </style>
+</head>
+<body>
+   <section>
+    <main>
+        <div></div>
+        <div></div>
+        <div></div>
+    </main>
+   </section>
+</body>
+</html>

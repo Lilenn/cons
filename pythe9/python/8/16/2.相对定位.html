@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height:100px;
+            background-color: red;
+            /* 设置定位属性 为相对de relative相对的 */
+            position: relative;
+            /* 当给同一个属性赋值多次的时候，
+            最终效果以最后一个值为依据 */
+            left: 100px;
+            left: 200px;
+            left: 1000px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 相对定位：相对于自己的 初始位置 进行定位的 -->
+    <div></div>
+</body>
+</html>
